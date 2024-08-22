@@ -1,17 +1,35 @@
 import { Text, View, StyleSheet, Platform } from "react-native";
 
+// const styles = StyleSheet.create({
+//   bigBlue: {
+//     color: Platform.OS === "ios" ? "blue" : "red",
+//     fontWeight: "bold",
+//     fontSize: 30,
+//   },
+// });
+
 const styles = StyleSheet.create({
-  bigBlue: {
-    color: Platform.OS === "ios" ? "blue" : "red",
-    fontWeight: "bold",
-    fontSize: 30,
+  container: {
+    flex: 1,
+    ...Platform.select({
+      ios: {
+        backgroundColor: 'red',
+      },
+      android: {
+        backgroundColor: 'green',
+      },
+      default: {
+        // other platforms, web for example
+        backgroundColor: 'blue',
+      },
+    }),
   },
 });
 
 export default function Home() {
   return (
-    <View>
-      <Text style={styles.bigBlue}>Home screen</Text>
+    <View style={styles.container}>
+      <Text >Home screen</Text>
     </View>
   );
 }
