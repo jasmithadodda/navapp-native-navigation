@@ -17,11 +17,7 @@ export default function Index() {
         title="Go to Details"
         onPress={() => router.push('/home')}
       /><br/>
-      <Button
-        title="About"
-        onPress={() => router.push('/about')}
-      />
-
+  
     </View>
   );
 }

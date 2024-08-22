@@ -1,15 +1,17 @@
-import { Text, View } from "react-native";
+import { Text, View, StyleSheet, Platform } from "react-native";
+
+const styles = StyleSheet.create({
+  bigBlue: {
+    color: Platform.OS === "ios" ? "blue" : "red",
+    fontWeight: "bold",
+    fontSize: 30,
+  },
+});
 
 export default function Home() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Home screen</Text>
+    <View>
+      <Text style={styles.bigBlue}>Home screen</Text>
     </View>
   );
 }
