@@ -18,6 +18,14 @@ function Details({ route, navigation }) {
         title="Go back to first screen in stack"
         onPress={() => navigation.popToTop()}
       />
+      <Button
+        title="Update param"
+        onPress={() =>
+          navigation.setParams({
+            itemId: Math.floor(Math.random() * 100),
+          })
+        }
+      />
     </View>
   );
 }
