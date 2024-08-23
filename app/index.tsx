@@ -1,45 +1,19 @@
-import { Link, useRouter } from "expo-router";
-import { Button, Text, View,StyleSheet, Platform } from "react-native";
+import { Button, Text, View, StyleSheet, Platform } from "react-native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
+import Home from "./home";
 
-const router = useRouter();
+//const router = useRouter();
+const Stack = createNativeStackNavigator();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    ...Platform.select({
-      ios: {
-        backgroundColor: 'red',
-      },
-      android: {
-        backgroundColor: 'green',
-      },
-      default: {
-        // other platforms, web for example
-        backgroundColor: 'blue',
-      },
-    }),
-  },
-});
 
 export default function Index() {
   return (    
-    
-  
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-      <Link href="./about">About</Link>
-
-      <Button
-        title="Go to Details"
-        onPress={() => router.push('/home')}
-      />
-    </View>
+    <NavigationContainer independent={true}>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
   
 }

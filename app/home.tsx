@@ -14,13 +14,13 @@ const styles = StyleSheet.create({
     ...Platform.select({
       ios: {
         backgroundColor: 'red',
-      },
+      }, 
       android: {
         backgroundColor: 'green',
       },
       default: {
         // other platforms, web for example
-        backgroundColor: 'blue',
+        backgroundColor: 'white',
       },
     }),
   },
