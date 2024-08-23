@@ -1,13 +1,5 @@
 import { Text, View, StyleSheet, Platform } from "react-native";
 
-// const styles = StyleSheet.create({
-//   bigBlue: {
-//     color: Platform.OS === "ios" ? "blue" : "red",
-//     fontWeight: "bold",
-//     fontSize: 30,
-//   },
-// });
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
