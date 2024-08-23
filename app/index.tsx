@@ -13,20 +13,22 @@ const Stack = createNativeStackNavigator();
 export default function Index() {
   return (    
     <NavigationContainer independent={true}> 
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "#f4511e",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+        }}
+      >
     <Stack.Screen
           name="Home"
           component={Home}
-          options={{
-            title: "My home",
-            headerStyle: {
-              backgroundColor: "#f4511e",
-            },
-            headerTintColor: "#fff",
-            headerTitleStyle: {
-              fontWeight: "bold",
-            },
-          }}
+          options={{ title: "Dashboard" }}
         />
         <Stack.Screen
           name="Details"
