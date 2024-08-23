@@ -10,9 +10,11 @@ const Stack = createNativeStackNavigator();
 
 export default function Index() {
   return (    
-    <NavigationContainer independent={true}>
-     <Stack.Navigator initialRouteName="Welcome Home">
-     <Stack.Screen name="Welcome Home" component={Home} />
+    <NavigationContainer independent={true}> 
+    <Stack.Navigator initialRouteName="Home">
+    <Stack.Screen name="Home" component={Home}   
+    options={{ title: 'Dashboard' }}
+    />
      <Stack.Screen name="Details" component={Details} />
       </Stack.Navigator>
     </NavigationContainer>
