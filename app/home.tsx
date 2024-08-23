@@ -26,6 +26,7 @@ export default function Home({navigation}) {
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}
       />
+      
     </View>
   );
 }
