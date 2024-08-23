@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import Home from "./home";
 import Details from "./screens/details";
+import CreatePostScreen from "./screens/createPost";
 
 //const router = useRouter();
 const Stack = createNativeStackNavigator();
@@ -22,6 +23,11 @@ export default function Index() {
           component={Details}
           initialParams={{ itemId: 42 }}
     />
+    <Stack.Screen
+          name="CreatePost"
+          component={CreatePostScreen}
+          options={{ title: "write mail" }}
+        />
      
       </Stack.Navigator>
     </NavigationContainer>
