@@ -26,7 +26,7 @@ export default function Index() {
     <Stack.Screen
           name="CreatePost"
           component={CreatePostScreen}
-          options={{ title: "write mail" }}
+          options={({ route }) => ({ title: route.params.name })}
         />
      
       </Stack.Navigator>

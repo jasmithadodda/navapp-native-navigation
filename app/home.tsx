@@ -43,7 +43,7 @@ export default function Home({ navigation, route }) {
       />
       <Button
         title="Create post"
-        onPress={() => navigation.navigate("CreatePost")}
+        onPress={() => navigation.navigate("CreatePost", { title: 'Custom createpost' })}
       />
     </View>
   );
